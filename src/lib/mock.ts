@@ -19,16 +19,16 @@ function mulberry32(seed: number) {
 }
 
 const PRODUCTS = [
-  { sku: "SP-1001", name: "Wireless Earbuds Pro", category: "Electronics", price: 890, weight: 12 },
-  { sku: "SP-1002", name: "USB-C Fast Charger 65W", category: "Electronics", price: 450, weight: 10 },
-  { sku: "SP-2001", name: "Cotton Oversized Tee", category: "Fashion", price: 290, weight: 9 },
-  { sku: "SP-2002", name: "Canvas Tote Bag", category: "Fashion", price: 350, weight: 7 },
-  { sku: "SP-3001", name: "Vitamin C Serum 30ml", category: "Beauty", price: 520, weight: 8 },
-  { sku: "SP-3002", name: "Matte Lipstick Set", category: "Beauty", price: 390, weight: 6 },
-  { sku: "SP-4001", name: "Stainless Water Bottle 1L", category: "Home & Living", price: 320, weight: 7 },
-  { sku: "SP-4002", name: "Aroma Diffuser", category: "Home & Living", price: 640, weight: 5 },
-  { sku: "SP-5001", name: "Protein Bar (Box of 12)", category: "Food & Health", price: 480, weight: 6 },
-  { sku: "SP-5002", name: "Cold Brew Coffee Pack", category: "Food & Health", price: 260, weight: 8 },
+  { sku: "FIL-PLA-1K", name: "PLA Filament 1kg", category: "Filament", price: 590, weight: 14 },
+  { sku: "FIL-PETG-1K", name: "PETG Filament 1kg", category: "Filament", price: 690, weight: 9 },
+  { sku: "RES-STD-1L", name: "Standard Resin 1L", category: "Resin", price: 890, weight: 7 },
+  { sku: "PRT-NOZ-04", name: '0.4mm Brass Nozzle (5 pcs)', category: "Printer Parts", price: 120, weight: 8 },
+  { sku: "PRT-PEI-235", name: "PEI Spring Steel Plate 235mm", category: "Printer Parts", price: 450, weight: 6 },
+  { sku: "MOD-DRAGON", name: "Articulated Dragon (Rainbow)", category: "3D Printed Models", price: 350, weight: 12 },
+  { sku: "MOD-MINI-32", name: "Miniature Figure 32mm", category: "3D Printed Models", price: 180, weight: 8 },
+  { sku: "ACC-STAND", name: "Custom Phone Stand", category: "Accessories", price: 220, weight: 7 },
+  { sku: "ACC-CABLE", name: "Desk Cable Organizer", category: "Accessories", price: 90, weight: 6 },
+  { sku: "SVC-PRINT", name: "Custom 3D Printing Service (100g)", category: "Printing Service", price: 150, weight: 9 },
 ];
 
 const HISTORY_DAYS = 400;

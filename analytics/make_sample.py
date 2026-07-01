@@ -17,11 +17,11 @@ except Exception:
     pass
 
 PRODUCTS = [
-    ("SP-1001", "Wireless Earbuds Pro", "Electronics", 890),
-    ("SP-2001", "Cotton Oversized Tee", "Fashion", 290),
-    ("SP-3001", "Vitamin C Serum 30ml", "Beauty", 520),
-    ("SP-4001", "Stainless Water Bottle 1L", "Home & Living", 320),
-    ("SP-5002", "Cold Brew Coffee Pack", "Food & Health", 260),
+    ("FIL-PLA-1K", "PLA Filament 1kg", "Filament", 590),
+    ("MOD-DRAGON", "Articulated Dragon (Rainbow)", "3D Printed Models", 350),
+    ("RES-STD-1L", "Standard Resin 1L", "Resin", 890),
+    ("PRT-NOZ-04", "0.4mm Brass Nozzle (5 pcs)", "Printer Parts", 120),
+    ("SVC-PRINT", "Custom 3D Printing Service (100g)", "Printing Service", 150),
 ]
 WEEKDAY_FACTOR = [1.02, 1.12, 1.35, 1.25, 0.85, 0.92, 0.98]  # Mon..Sun
 
