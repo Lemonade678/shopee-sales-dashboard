@@ -1,0 +1,11 @@
+# Core time-frame analytics
+pandas>=2.1
+numpy>=1.26
+openpyxl>=3.1        # read .xlsx Shopee exports
+
+# Forecasting (optional — code falls back to a linear model if missing)
+statsmodels>=0.14
+
+# Optional: push aggregates/rows into Supabase
+# supabase>=2.4
+# python-dotenv>=1.0

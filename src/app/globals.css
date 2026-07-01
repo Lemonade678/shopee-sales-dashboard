@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply text-slate-900 antialiased;
+  background:
+    radial-gradient(60rem 40rem at 100% -10%, rgba(238, 77, 45, 0.06), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 0%, rgba(14, 165, 233, 0.05), transparent 55%),
+    #f8fafc;
+  min-height: 100vh;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm shadow-slate-200/50;
+  }
+  .card-hover {
+    @apply transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-200/60;
+  }
+  .section-title {
+    @apply text-base font-semibold text-slate-900;
+  }
+}
