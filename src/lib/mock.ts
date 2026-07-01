@@ -19,16 +19,16 @@ function mulberry32(seed: number) {
 }
 
 const PRODUCTS = [
-  { sku: "FIL-PLA-1K", name: "PLA Filament 1kg", category: "Filament", price: 590, weight: 14 },
-  { sku: "FIL-PETG-1K", name: "PETG Filament 1kg", category: "Filament", price: 690, weight: 9 },
-  { sku: "RES-STD-1L", name: "Standard Resin 1L", category: "Resin", price: 890, weight: 7 },
-  { sku: "PRT-NOZ-04", name: '0.4mm Brass Nozzle (5 pcs)', category: "Printer Parts", price: 120, weight: 8 },
-  { sku: "PRT-PEI-235", name: "PEI Spring Steel Plate 235mm", category: "Printer Parts", price: 450, weight: 6 },
-  { sku: "MOD-DRAGON", name: "Articulated Dragon (Rainbow)", category: "3D Printed Models", price: 350, weight: 12 },
-  { sku: "MOD-MINI-32", name: "Miniature Figure 32mm", category: "3D Printed Models", price: 180, weight: 8 },
-  { sku: "ACC-STAND", name: "Custom Phone Stand", category: "Accessories", price: 220, weight: 7 },
-  { sku: "ACC-CABLE", name: "Desk Cable Organizer", category: "Accessories", price: 90, weight: 6 },
-  { sku: "SVC-PRINT", name: "Custom 3D Printing Service (100g)", category: "Printing Service", price: 150, weight: 9 },
+  { sku: "R3D-PLA-BK", name: "R3D PLA+ 1kg (Black)", category: "R3D Filament", price: 490, weight: 15 },
+  { sku: "R3D-PLA-WH", name: "R3D PLA+ 1kg (White)", category: "R3D Filament", price: 490, weight: 12 },
+  { sku: "R3D-MATTE-GY", name: "R3D PLA Matte 1kg (Grey)", category: "R3D Filament", price: 550, weight: 9 },
+  { sku: "R3D-SILK-GD", name: "R3D Silk PLA 1kg (Gold)", category: "R3D Filament", price: 650, weight: 7 },
+  { sku: "R3D-PETG-CL", name: "R3D PETG 1kg (Clear)", category: "R3D Filament", price: 590, weight: 8 },
+  { sku: "R3D-TPU-BK", name: "R3D TPU Flexible 500g (Black)", category: "R3D Filament", price: 490, weight: 5 },
+  { sku: "PART-BRKT", name: "3D Printed Mounting Bracket", category: "3D Parts", price: 120, weight: 8 },
+  { sku: "PART-GEAR", name: "3D Printed Gear Set", category: "3D Parts", price: 180, weight: 6 },
+  { sku: "PART-KNOB", name: "3D Printed Knob (set of 4)", category: "3D Parts", price: 90, weight: 6 },
+  { sku: "PART-CUSTOM", name: "Custom 3D Printed Part (per 100g)", category: "3D Parts", price: 150, weight: 9 },
 ];
 
 const HISTORY_DAYS = 400;

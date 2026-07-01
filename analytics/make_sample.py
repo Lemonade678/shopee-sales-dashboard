@@ -17,11 +17,11 @@ except Exception:
     pass
 
 PRODUCTS = [
-    ("FIL-PLA-1K", "PLA Filament 1kg", "Filament", 590),
-    ("MOD-DRAGON", "Articulated Dragon (Rainbow)", "3D Printed Models", 350),
-    ("RES-STD-1L", "Standard Resin 1L", "Resin", 890),
-    ("PRT-NOZ-04", "0.4mm Brass Nozzle (5 pcs)", "Printer Parts", 120),
-    ("SVC-PRINT", "Custom 3D Printing Service (100g)", "Printing Service", 150),
+    ("R3D-PLA-BK", "R3D PLA+ 1kg (Black)", "R3D Filament", 490),
+    ("R3D-SILK-GD", "R3D Silk PLA 1kg (Gold)", "R3D Filament", 650),
+    ("R3D-PETG-CL", "R3D PETG 1kg (Clear)", "R3D Filament", 590),
+    ("PART-GEAR", "3D Printed Gear Set", "3D Parts", 180),
+    ("PART-CUSTOM", "Custom 3D Printed Part (per 100g)", "3D Parts", 150),
 ]
 WEEKDAY_FACTOR = [1.02, 1.12, 1.35, 1.25, 0.85, 0.92, 0.98]  # Mon..Sun
 
