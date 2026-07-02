@@ -11,10 +11,12 @@ Legend — Data need: 🟢 already in the order export · 🟡 small schema addi
 
 ## Tier 1 — quick wins (days, high value)
 
-### 1. Filament type & colour breakdown 🟢
+### 1. Filament type & colour breakdown 🟢 ✅ DONE
 Split revenue/units by **material** (PLA+ / PETG / Silk / TPU) and **colour**,
 parsed from the product name / `variation` field. Answers "which colours do I
 restock first?". *This is the single most useful view for a filament shop.*
+Shipped: `src/lib/filament.ts`, `src/components/FilamentBreakdown.tsx`,
+`product_breakdown` RPC.
 
 ### 2. Kilograms sold & revenue-per-kg 🟡
 Add a `weight_kg` per SKU (0.5 / 1.0). Then show **kg sold per month** and
