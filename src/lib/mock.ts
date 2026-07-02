@@ -175,6 +175,19 @@ export function mockCategoryBreakdown(from: string, to: string): CategorySlice[]
   return [...byCat.values()].sort((a, b) => b.revenue - a.revenue);
 }
 
+export function mockProductBreakdown(
+  from: string,
+  to: string
+): { product_name: string; variation: string | null; revenue: number; units: number }[] {
+  // Colour/material live in the product name for the demo catalogue.
+  return mockTopProducts(from, to, PRODUCTS.length).map((p) => ({
+    product_name: p.product_name ?? "",
+    variation: null,
+    revenue: p.revenue,
+    units: p.units,
+  }));
+}
+
 export function mockWeekday(from: string, to: string): WeekdayPoint[] {
   const days = dataset().days.filter((d) => inRange(d.date, from, to));
   const rev = new Array(7).fill(0);

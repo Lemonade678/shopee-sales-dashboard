@@ -4,6 +4,7 @@ import { isSupabaseConfigured } from "./supabase/env";
 import {
   mockCategoryBreakdown,
   mockKpis,
+  mockProductBreakdown,
   mockSeries,
   mockTopProducts,
   mockWeekday,
@@ -107,6 +108,32 @@ export async function getCategoryBreakdown(q: DashboardQuery): Promise<CategoryS
   if (error) throw new Error(`category_breakdown: ${error.message}`);
   return (data ?? []).map((r: any) => ({
     category: r.category,
+    revenue: Number(r.revenue),
+    units: Number(r.units),
+  }));
+}
+
+export interface ProductBreakdownRow {
+  product_name: string | null;
+  variation: string | null;
+  revenue: number;
+  units: number;
+}
+
+export async function getProductBreakdown(q: DashboardQuery): Promise<ProductBreakdownRow[]> {
+  if (!isSupabaseConfigured() || q.shopId === DEMO_SHOP.id) {
+    return mockProductBreakdown(q.from, q.to);
+  }
+  const supabase = getServerClient()!;
+  const { data, error } = await supabase.rpc("product_breakdown", {
+    p_shop: q.shopId,
+    p_from: q.from,
+    p_to: q.to,
+  });
+  if (error) throw new Error(`product_breakdown: ${error.message}`);
+  return (data ?? []).map((r: any) => ({
+    product_name: r.product_name,
+    variation: r.variation,
     revenue: Number(r.revenue),
     units: Number(r.units),
   }));

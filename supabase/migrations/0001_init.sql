@@ -191,6 +191,30 @@ language sql stable as $$
   order by revenue desc;
 $$;
 
+-- Per-product/variation aggregates — feeds the filament material & colour view.
+-- Returns one row per (sku, variation); material/colour are parsed app-side.
+create or replace function public.product_breakdown(
+  p_shop uuid,
+  p_from date,
+  p_to   date
+)
+returns table (sku text, product_name text, variation text, revenue numeric, units bigint)
+language sql stable as $$
+  select
+    sku,
+    max(product_name)            as product_name,
+    coalesce(variation, '')      as variation,
+    sum(revenue)::numeric        as revenue,
+    sum(quantity)::bigint        as units
+  from public.sales_records
+  where shop_id = p_shop
+    and order_date >= p_from
+    and order_date < (p_to + 1)
+    and coalesce(order_status, '') not in ('Cancelled', 'cancelled', 'Unpaid')
+  group by sku, coalesce(variation, '')
+  order by revenue desc;
+$$;
+
 -- Sales by weekday (0=Sunday) — feeds the seasonality view.
 create or replace function public.sales_by_weekday(
   p_shop uuid,

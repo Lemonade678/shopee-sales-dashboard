@@ -4,14 +4,17 @@ import SalesTimeSeriesChart from "@/components/SalesTimeSeriesChart";
 import TopProductsTable from "@/components/TopProductsTable";
 import CategoryDonut from "@/components/CategoryDonut";
 import WeekdaySeasonality from "@/components/WeekdaySeasonality";
+import FilamentBreakdown from "@/components/FilamentBreakdown";
 import {
   getCategoryBreakdown,
   getKpis,
+  getProductBreakdown,
   getSeries,
   getShops,
   getTopProducts,
   getWeekday,
 } from "@/lib/data";
+import { aggregateFilament } from "@/lib/filament";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { fmtInt, fmtMoney } from "@/lib/format";
 import type { Granularity } from "@/lib/types";
@@ -61,14 +64,17 @@ export default async function DashboardPage({
   const query = { shopId, from, to, granularity };
   const prevQuery = { shopId, from: isoDay(prevFrom), to: isoDay(prevTo), granularity };
 
-  const [series, kpis, prevKpis, topProducts, categories, weekday] = await Promise.all([
+  const [series, kpis, prevKpis, topProducts, categories, weekday, productRows] = await Promise.all([
     getSeries(query),
     getKpis(query),
     getKpis(prevQuery),
     getTopProducts(query, 8),
     getCategoryBreakdown(query),
     getWeekday(query),
+    getProductBreakdown(query),
   ]);
+
+  const filament = aggregateFilament(productRows);
 
   const usingDemo = !isSupabaseConfigured() || shopId === "demo-shop";
 
@@ -149,6 +155,8 @@ export default async function DashboardPage({
         </div>
         <CategoryDonut data={categories} />
       </div>
+
+      <FilamentBreakdown byMaterial={filament.byMaterial} byColour={filament.byColour} />
 
       <WeekdaySeasonality data={weekday} />
     </div>
