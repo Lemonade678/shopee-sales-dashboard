@@ -37,6 +37,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Dashboard
                 </Link>
                 <Link
+                  href="/insights"
+                  className="rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                >
+                  AI Insights
+                </Link>
+                <Link
                   href="/import"
                   className="rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
                 >

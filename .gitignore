@@ -14,6 +14,9 @@ next-env.d.ts
 .vercel
 *.tsbuildinfo
 
+# AI agents runtime output
+agents/output/
+
 # Python
 analytics/.venv/
 analytics/__pycache__/

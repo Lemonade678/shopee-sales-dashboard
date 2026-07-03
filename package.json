@@ -7,17 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check:supabase": "node scripts/check-supabase.mjs"
+    "check:supabase": "node scripts/check-supabase.mjs",
+    "agents": "tsx agents/run.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.109.1",
     "@supabase/supabase-js": "^2.45.4",
     "date-fns": "^3.6.0",
+    "dotenv": "^17.4.2",
     "next": "^14.2.33",
     "papaparse": "^5.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "recharts": "^2.12.7",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+    "tsx": "^4.22.4",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
